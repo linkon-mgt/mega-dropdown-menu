@@ -149,7 +149,6 @@ body {
   text-align: center;
   transition: all linear 0.3s;
   z-index: 9999;
-  overflow-y: scroll;
 }
 #mobile-menu .accordion .accordion-item {
   background-color: #fec600;
