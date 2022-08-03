@@ -1,0 +1,136 @@
+/*================================================
+        |   |   |  banner part start |   |     |   |
+ ================================================*/
+#banner {
+    position: relative;
+
+    .banner-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+
+        .banner-content {
+            h2 {
+                @include font('Raleway', 36px, 400, $normalcolor);
+            }
+
+
+            h1 {
+                @include font('Raleway', 55px, 700, $hovercolor);
+                text-transform: uppercase;
+            }
+
+            p {
+                @include font('Open Sans', 14px, 400, $paracolor);
+                line-height: 24px;
+                padding-bottom: 30px;
+            }
+
+            .banner-btn {
+
+                a {
+                    @include font('Raleway', 16px, 500, $normalcolor);
+                    width: 131px;
+                    border: 1px solid $socialbg;
+                    display: inline-block;
+                    text-transform: uppercase;
+                    @include pgap(20px, 20px, 0, 0);
+                    @include mgap(0, 0, 0, 20px);
+                    position: relative;
+                    z-index: 1;
+                    overflow-x: hidden;
+                    border-radius: 3px;
+
+                    &::after {
+                        position: absolute;
+                        content: '';
+                        top: 0;
+                        left: -187px;
+                        height: 100%;
+                        width: 0%;
+                        background-color: $hoverbg;
+                        transform: skewX(-25deg);
+                        transition: all ease 0.2s;
+                        z-index: -1;
+                    }
+
+                    &:hover {
+                        &::after {
+                            width: 130%;
+                            left: -20px;
+                        }
+
+                        color: $btncolor;
+                        border: 1px solid $hoverbg;
+                    }
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+
+                }
+            }
+        }
+    }
+
+    .ban-left {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 60px;
+        color: $banarrow;
+        text-align: center;
+        line-height: 35px;
+        font-size: 20px;
+        height: 35px;
+        width: 35px;
+        border-radius: 50%;
+        background-color: $socialbg;
+        transition: all linear 0.3s;
+        z-index: 33;
+
+        &:hover {
+            background-color: $hoverbg;
+        }
+    }
+
+    .ban-right {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 60px;
+        color: $banarrow;
+        text-align: center;
+        line-height: 35px;
+        font-size: 20px;
+        height: 35px;
+        width: 35px;
+        border-radius: 50%;
+        background-color: $socialbg;
+        transition: all linear 0.3s;
+        z-index: 33;
+
+        &:hover {
+            background-color: $hoverbg;
+        }
+    }
+}
+.ban-main-shape{
+    position: relative;
+    .banner-shape {
+        width: 100%;
+        height: 100px;
+        background-color: $socialbg;
+        transform: skewX(-87deg);
+        transform-origin: left bottom;
+        position:absolute;
+        left: 0;
+        top: -100px;
+    }
+}
+/*================================================
+        |   |   banner part end |   |   |   |   |
+ ================================================*/

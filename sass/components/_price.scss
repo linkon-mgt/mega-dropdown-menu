@@ -1,0 +1,140 @@
+/*================================================
+        |   |   price part start |   |   |   |   |
+ ================================================*/
+#price {
+    .heading {
+        h4 {
+            @include font('Raleway', 35px, 400, $abouthead);
+            text-transform: capitalize;
+            @include pgap(0, 30px, 0, 0)
+        }
+
+        p {
+            @include font('Open Sans', 14px, 400, $aboutpara);
+            @include pgap(0, 60px, 25px, 25px);
+            line-height: 24px;
+        }
+    }
+
+    .pricing-item {
+        background-color: $serviceparabg;
+        position: relative;
+
+        &:hover {
+            .price-top {
+                background-color: $hoverbg;
+
+                h5 {
+                    color: $abouthead;
+                }
+            }
+
+            .price-plan {
+                border: 1px solid $hoverbg;
+
+                .price-circle {
+                    background-color: $hoverbg;
+
+                    .price-inner-circle {
+                        h5 {
+                            color: $aboutpara;
+                        }
+
+                        p {
+                            color: $aboutpara;
+                        }
+                    }
+                }
+            }
+
+            .price-bottom {
+                background-color: $hoverbg;
+
+                a {
+                    color: $aboutpara;
+                }
+            }
+        }
+
+        .price-top {
+            background-color: $aboucircle2;
+            @include pgap(30px, 90px, 0, 0);
+            clip-path: polygon(0 0, 100% 0, 100% 72%, 0 100%);
+            transition: all linear 0.3s;
+
+            h5 {
+                @include font('Raleway', 20px, 500, $normalcolor);
+                text-transform: uppercase;
+                transition: all linear 0.3s;
+            }
+        }
+
+        .price-plan {
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            background-color: $serviceparabg;
+            border: 1px solid $aboucircle2;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 85px;
+            transition: all linear 0.3s;
+
+            .price-circle {
+                height: 90px;
+                width: 90px;
+                border-radius: 50%;
+                background-color: $aboucircle2;
+                transition: all linear 0.3s;
+
+                .price-inner-circle {
+                    h5 {
+                        @include font('Raleway', 29px, 400, $normalcolor);
+                        @include mgap(0, 0, 0, 0);
+                        transition: all linear 0.3s;
+                    }
+
+                    p {
+                        @include font('Raleway', 12px, 300, $normalcolor);
+                        transition: all linear 0.3s;
+                    }
+                }
+            }
+        }
+
+        .price-list {
+            @include pgap(50px, 10px, 0, 0);
+
+            ul {
+                li {
+                    @include pgap(0, 25px, 0, 0);
+
+                    &:last-child {
+                        @include pgap(0, 0, 0, 0);
+                    }
+
+                    a {
+                        @include font('Open Sans', 14px, 400, $aboutpara);
+                    }
+                }
+            }
+        }
+
+        .price-bottom {
+            background-color: $aboucircle2;
+            @include pgap(40px, 25px, 0, 0);
+            clip-path: polygon(0 40%, 100% 0, 100% 100%, 0 100%);
+            transition: all linear 0.3s;
+
+            a {
+                @include font('Raleway', 16px, 500, $normalcolor);
+                text-transform: uppercase;
+                transition: all linear 0.3s;
+            }
+        }
+    }
+}
+/*================================================
+        |   |   price part end |   |   |   |   |
+ ================================================*/

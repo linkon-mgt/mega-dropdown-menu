@@ -1,0 +1,48 @@
+/*================================================
+        |   |  back to top part start |    |   |   |
+ ================================================*/
+#bottom-top{
+    .bottom-to-top{
+        position: fixed;
+        right: 15px;
+        bottom: 15px;
+        height: 40px;
+        width: 40px;
+        background-color: #8a3174;
+        text-align: center;
+        line-height: 40px;
+        cursor: pointer;
+        border-radius: 50%;
+        z-index: 99999;
+        display: none;
+        transition: all linear 0.3s;
+        animation: btp 1s linear;
+        border: 1px solid #fff;
+        .btt-icon{
+            font-size: 20px;
+            color: #fff;
+            transition: all linear 0.3s;
+        }
+        &:hover{
+            background-color: $hovercolor;
+            transform: scale(1.2);
+            .btt-icon{
+                color: #111;
+            }
+        }
+        @keyframes btp {
+            0% {
+                bottom: 85%;
+                right: 15px;
+            }
+        
+            100% {
+                right: 15px;
+                bottom: 15px;
+            }
+        }
+    }
+}
+/*================================================
+        |   |   |back to top part end |   |   |   |
+ ================================================*/

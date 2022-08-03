@@ -1,0 +1,103 @@
+/*================================================
+        |   |   footer part start |   |   |   |   |
+ ================================================*/
+#footer {
+    position: relative;
+    background-color: $footerbg;
+
+    &::after {
+        position: absolute;
+        content: '';
+        left: 0;
+        top: 110px;
+        width: 100%;
+        height: 2px;
+        background-color: #555;
+        transform: rotate(-3deg);
+    }
+
+    .footer-logo {
+        @include pgap(0, 120px, 0, 0);
+    }
+
+    .footer-wrapper {
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: '';
+            top: 0;
+            right: 0;
+            width: 1px;
+            height: 100%;
+            background-color: #555;
+        }
+
+        &:last-child {
+            &::after {
+                display: none;
+            }
+        }
+
+        .footer-item {
+            .footer-icon {
+                @include pgap(0, 20px, 0, 0);
+
+                a {
+                    display: inline-block;
+                    height: 40px;
+                    width: 40px;
+                    border-radius: 50%;
+                    background-color: $hoverbg;
+                    text-align: center;
+                    line-height: 40px;
+                    color: $aboutpara;
+                }
+            }
+
+            .footer-content {
+
+                p {
+                    @include font('Raleway', 16px, 500, $normalcolor);
+                    line-height: 24px;
+                    padding: 0 30px;
+                }
+            }
+        }
+    }
+
+    .footer-link {
+        @include pgap(50px, 0, 0, 0);
+
+        h4 {
+            @include font('Raleway', 20px, 500, $normalcolor);
+            text-transform: uppercase;
+            @include pgap(0, 20px, 0, 0);
+        }
+
+        .footer-social-link {
+            @include pgap(0, 30px, 0, 0);
+
+            a {
+                display: inline-block;
+                height: 40px;
+                width: 40px;
+                border-radius: 50%;
+                background-color: $socialbg;
+                text-align: center;
+                line-height: 40px;
+                color: $aboutpara;
+                @include mgap(0, 0, 10px, 10px);
+                transition: all linear .3s;
+
+                &:hover {
+                    background-color: $hoverbg;
+                }
+            }
+
+        }
+    }
+}
+/*================================================
+        |   |   footer part end |   |   |   |   |
+ ================================================*/

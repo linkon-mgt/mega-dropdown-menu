@@ -1,0 +1,18 @@
+/*================================================
+        |   |   |  copyright part start |   |   |   |   |
+ ================================================*/
+#copyright{
+    background-color: $aboucircle2;
+    @include pgap(20px,20px,0,0);
+    .copyright-content{
+        p{
+            @include font('Lato', 13px, 400, $normalcolor); 
+            span{
+                color: $hovercolor;
+            }
+        }
+    }
+}
+/*================================================
+        |   | copyright part end |   |   |   |   |
+ ================================================*/

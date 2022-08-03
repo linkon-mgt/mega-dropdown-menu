@@ -1,0 +1,61 @@
+/*================================================
+        |   |   counter part start |   |   |   |   |
+ ================================================*/
+#counter{
+    background:linear-gradient(rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 0.9)), url(../images/counterbg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    @include pgap(70px,70px,0,0);
+    position: relative;
+    .counter-top-shape{
+        width: 100%;
+        height: 100px;
+        background-color: $socialbg;
+        transform: skewX(-87deg);
+        transform-origin: left top;
+        position:absolute;
+        left: 0;
+        top: 0;
+    }
+    .counter-bottom-shape{
+        width: 100%;
+        height: 100px;
+        background-color: $socialbg;
+        transform: skewX(-87deg);
+        transform-origin: left bottom;
+        position:absolute;
+        left: 0;
+        bottom: 0;
+    }
+    .counter-wrapper{
+        display: flex;
+        justify-content: space-between;
+        transform: rotate(-3deg);
+        .counter-item{
+            width: 244px;
+            border: 1px solid $socialbg;
+            @include pgap(20px,20px,0,0);
+            @include mgap(0,0,12px,12px);
+            transform: skew(-3deg);
+            &:first-child{
+                margin-left: 0;
+            }
+            &:last-child{
+                margin-right: 0;
+            }
+            h4{
+                @include font('Raleway', 30px, 500, $normalcolor);
+                 transform: rotate(3deg);
+            }
+            p{
+                @include font('Raleway', 20px, 500, $normalcolor);
+                 transform: rotate(3deg);
+                text-transform: capitalize;
+            }
+        }
+    }
+}
+/*================================================
+        |   |   | counter part end |   |   |   |   |
+ ================================================*/

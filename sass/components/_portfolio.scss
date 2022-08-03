@@ -1,0 +1,78 @@
+/*================================================
+        |   |   |portfolio part start |   |   |   |   |
+ ================================================*/
+#portfolio {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../images/portfoliobg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include pgap(100px, 100px, 0px, 0px);
+    position: relative;
+
+    .heading {
+        h4 {
+            @include font('Raleway', 35px, 400, $normalcolor);
+            text-transform: capitalize;
+            @include pgap(0, 30px, 0, 0)
+        }
+
+        p {
+            width: 568px;
+            @include font('Open Sans', 14px, 400, $paracolor);
+            @include pgap(0, 60px, 0, 0);
+            line-height: 24px;
+        }
+    }
+
+    .port-item {
+        margin-bottom: 30px;
+        position: relative;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            height: 0;
+            width: 0;
+            background-color: rgba(153, 205, 50, 0.6);
+            transition: all linear .4s;
+        }
+        &:hover{
+            &::after{
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+
+    .port-top-shape {
+        width: 100%;
+        height: 100px;
+        background-color: $socialbg;
+        transform: skewX(-87deg);
+        transform-origin: left top;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    .port-bottom-shape {
+        width: 100%;
+        height: 100px;
+        background-color: $socialbg;
+        transform: skewX(-87deg);
+        transform-origin: left bottom;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+}
+
+/*================================================
+        |   |   portfolio part end |   |   |   |   |
+ ================================================*/

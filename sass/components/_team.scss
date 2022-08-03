@@ -1,0 +1,120 @@
+/*================================================
+        |   |   |  team part start |   |   |   |   |
+ ================================================*/
+#team {
+    margin-bottom: 20px;
+    .heading {
+        h4 {
+            @include font('Raleway', 35px, 400, $abouthead);
+            text-transform: capitalize;
+            @include pgap(0, 30px, 0, 0)
+        }
+
+        p {
+            @include font('Open Sans', 14px, 400, $aboutpara);
+            @include pgap(0, 60px, 25px, 25px);
+            line-height: 24px;
+        }
+    }
+
+    .team-item {
+        border: 1px solid #ddd;
+        background-color: $socialbg;
+        overflow: hidden;
+
+        .team-pic {
+            background-color: $serviceparabg;
+            clip-path: polygon(0 0, 100% 0, 100% 87%, 0% 100%);
+            margin-top: -115px;
+            position: relative;
+            height: 412px;
+            width: 100%;
+            img {
+                position: relative;
+                left: 0;
+                top: 135px;
+                height: 100%;
+                width: 100%;
+                object-fit: scale-down;
+                object-position: top;
+            }
+
+            .team-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 0;
+                width: 100%;
+                background-color: rgba(254, 199, 0, 0.5);
+                transition: all linear .3s;
+
+                a {
+                    position: absolute;
+                    top: 65%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    text-align: center;
+                    background-color: $socialbg;
+                    line-height: 40px;
+                    color: $aboutpara;
+                }
+            }
+        }
+
+        .team-content {
+            @include pgap(15px, 25px, 0, 0);
+
+            h4 {
+                @include font('Raleway', 20px, 500, $abouthead);
+                text-transform: capitalize
+            }
+
+            p {
+                @include font('Raleway', 16px, 400, $btncolor);
+            }
+        }
+
+        .team-icon {
+            text-align: center;
+            @include mgap(0,25px,0,0);
+            margin-top: -50px;
+            opacity: 0;
+            transition: all linear .3s;
+            a{
+                @include mgap(0,0,5px,5px);
+                height: 40px;
+                width: 40px;
+                border-radius: 50%;
+                display: inline-block;
+                background-color:fff;
+                text-align: center;
+                line-height: 40px;
+                border: 1px solid $footerbg;
+                color: $btncolor;
+                transition: all linear .3s;
+                &:hover{
+                    background-color: $hoverbg;
+                    border-color: $hoverbg;
+                }
+            }
+        }
+
+        &:hover {
+            .team-pic {
+                .team-overlay {
+                    height: 100%;
+                }
+            }
+            .team-icon{
+                margin-top: 0;
+                opacity: 1;
+            }
+        }
+    }
+}
+/*================================================
+        |   |   |    team part end |   |   |   |   |
+ ================================================*/

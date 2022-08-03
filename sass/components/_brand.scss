@@ -1,0 +1,59 @@
+/*================================================
+        |   |  brand part start |   |   |   |   |
+ ================================================*/
+#brand {
+    background-color: $serviceparabg;
+    @include pgap(60px, 60px, 0, 0);
+    position: relative;
+    .brand-top-shape{
+        width: 100%;
+        height: 100px;
+        background-color: $socialbg;
+        transform: skewX(-87deg);
+        transform-origin: left top;
+        position:absolute;
+        left: 0;
+        top: 0;
+    }
+    .brand-bottom-shape{
+        width: 100%;
+        height: 100px;
+        background-color: $footerbg;
+        transform: skewX(-87deg);
+        transform-origin: left bottom;
+        position:absolute;
+        left: 0;
+        bottom: 0;
+    }
+
+    .brand-wrapper {
+        display: flex;
+        justify-content: space-between;
+        transform: rotate(-3deg);
+
+        .brand-item {
+            width: 244px;
+            @include mgap(0, 0, 12px, 12px);
+            @include pgap(40px, 40px, 0, 0);
+            border: 1px solid $commentbg;
+            display: flex;
+            justify-content: center;
+            transform: skew(-3deg);
+            img{
+                transform: rotate(3deg);
+            }
+            &.slick-center{
+                border: 1px solid $hoverbg;
+            }
+            &:first-child{
+                margin-left: 5px;
+            }
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+    }
+}
+/*================================================
+        |   |   | brand part end |   |   |   |   |
+ ================================================*/
